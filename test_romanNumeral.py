@@ -10,3 +10,8 @@ class TestRomanNumeral(unittest.TestCase):
         self.assertEqual(self.r.toRoman(12), 'XII')
         self.assertEqual(self.r.toRoman(149), 'CXLIX')
         self.assertEqual(self.r.toRoman(2841), 'MMDCCCXLI')
+        
+    def test_numInRange(self):
+        with self.assertRaises(ValueError):
+            self.r.toRoman(0)
+            self.r.toRoman(3001)
