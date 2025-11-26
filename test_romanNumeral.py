@@ -15,3 +15,6 @@ class TestRomanNumeral(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.r.toRoman(0)
             self.r.toRoman(3001)
+
+if __name__ == '__main__':
+    unittest.main()
