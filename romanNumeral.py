@@ -5,3 +5,7 @@ class RomanNumeral:
         (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')
     ]
     
+    def toRoman(self, num):
+        if num < 1 or num > 3000:
+            raise ValueError("Number must be between 1 and 3000 inclusive.")
+        
