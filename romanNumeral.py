@@ -9,3 +9,9 @@ class RomanNumeral:
         if num < 1 or num > 3000:
             raise ValueError("Number must be between 1 and 3000 inclusive.")
         
+        result = ''
+        for value, numeral in self.numerals:
+            while num >= value:
+                result += numeral
+                num -= value
+        return result
